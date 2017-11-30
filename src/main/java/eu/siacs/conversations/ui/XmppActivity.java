@@ -974,6 +974,7 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	protected void registerNdefPushMessageCallback() {
+		/*
 		NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (nfcAdapter != null && nfcAdapter.isEnabled()) {
 			nfcAdapter.setNdefPushMessageCallback(new NfcAdapter.CreateNdefMessageCallback() {
@@ -986,6 +987,7 @@ public abstract class XmppActivity extends Activity {
 				}
 			}, this);
 		}
+		*/
 	}
 
 	protected boolean neverCompressPictures() {
@@ -997,10 +999,12 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	protected void unregisterNdefPushMessageCallback() {
+		/*
 		NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (nfcAdapter != null && nfcAdapter.isEnabled()) {
 			nfcAdapter.setNdefPushMessageCallback(null,this);
 		}
+		*/
 	}
 
 	protected String getShareableUri() {
