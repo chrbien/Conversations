@@ -26,6 +26,10 @@ public class PhoneHelper {
 			listener.onPhoneContactsLoaded(phoneContacts);
 			return;
 		}
+
+		listener.onPhoneContactsLoaded(phoneContacts);
+		return;
+/*
 		final String[] PROJECTION = new String[]{ContactsContract.Data._ID,
 				ContactsContract.Data.DISPLAY_NAME,
 				ContactsContract.Data.PHOTO_URI,
@@ -80,12 +84,17 @@ public class PhoneHelper {
 				listener.onPhoneContactsLoaded(phoneContacts);
 			}
 		}
+		*/
 	}
 
 	public static Uri getProfilePictureUri(Context context) {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context.checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
 			return null;
 		}
+
+		return null;
+
+		/*
 		final String[] projection = new String[]{Profile._ID, Profile.PHOTO_URI};
 		final Cursor cursor;
 		try {
@@ -99,6 +108,7 @@ public class PhoneHelper {
 		final String uri = cursor.moveToFirst() ? cursor.getString(1) : null;
 		cursor.close();
 		return uri == null ? null : Uri.parse(uri);
+		*/
 	}
 
 	public static String getVersionName(Context context) {

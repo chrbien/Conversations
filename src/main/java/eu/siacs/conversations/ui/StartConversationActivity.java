@@ -733,6 +733,7 @@ public class StartConversationActivity extends XmppActivity implements OnRosterU
     }
 
     private void askForContactsPermissions() {
+        /*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
                 if (mRequestedContactsPermission.compareAndSet(false, true)) {
@@ -765,6 +766,7 @@ public class StartConversationActivity extends XmppActivity implements OnRosterU
                 }
             }
         }
+        */
     }
 
     @Override

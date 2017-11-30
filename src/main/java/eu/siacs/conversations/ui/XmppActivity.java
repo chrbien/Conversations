@@ -424,15 +424,20 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	protected boolean isOptimizingBattery() {
+		return false;
+		/*
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 			PowerManager pm = (PowerManager) getSystemService(POWER_SERVICE);
 			return !pm.isIgnoringBatteryOptimizations(getPackageName());
 		} else {
 			return false;
 		}
+		*/
 	}
 
 	protected boolean isAffectedByDataSaver() {
+		return false;
+		/*
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 			ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 			return cm.isActiveNetworkMetered()
@@ -440,6 +445,7 @@ public abstract class XmppActivity extends Activity {
 		} else {
 			return false;
 		}
+		*/
 	}
 
 	protected boolean usingEnterKey() {
@@ -770,10 +776,10 @@ public abstract class XmppActivity extends Activity {
 				requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestCode);
 				return false;
 			} else {
-				return true;
+				return false;
 			}
 		} else {
-			return true;
+			return false;
 		}
 	}
 
