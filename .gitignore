@@ -43,3 +43,5 @@ import-summary.txt
 .navigation/
 /keystore.jks
 /free/release/output.json
+
+test/
